@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    }
+    
+    html, body {
+        height: 100%;
+    }
+    .container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        max-width: 100%;
+       min-height: 100%;
+       color: black;
+    }
+    
+    
