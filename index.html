@@ -15,8 +15,14 @@
     <body>
         <div class="container">
           <h1>Country Searcher</h1>
-         
-            <input id="searchInput" />
+          <div class="ui search">
+            <div class="ui icon input">
+              <input id="searchInput" class="prompt" type="text" placeholder="Search countries...">
+              <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+          </div>
+            
             <button class="ui primary button " id="submitBtn">
                 Search
               </button>
