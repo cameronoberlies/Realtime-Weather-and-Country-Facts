@@ -18,7 +18,7 @@ submitBtn.addEventListener("click", function () {
       var languageDiv = document.createElement('div');
         languageDiv.setAttribute('id', 'language')
         languageDiv.textContent= data[0].languages;//Languages not displaying on page
-      var mapsDiv = document.createElement('div');
+      var mapsDiv = document.createElement('a');
         mapsDiv.setAttribute('id', 'maps');
         mapsDiv.textContent = data[0].maps.googleMaps;
       var regionDiv = document.createElement('div');
