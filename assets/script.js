@@ -26,7 +26,7 @@ submitBtn.addEventListener("click", function () {
         regionDiv.textContent = data[0].region;
       var populationDiv = document.createElement('div');
         populationDiv.setAttribute('id', 'population');
-        populationDiv.textContent = data[0].population;//Population not displaying on page
+        populationDiv.textContent = data[0].population;
       var container1 = document.querySelector('.container');
         container1.appendChild(currenciesDiv);
         container1.appendChild(capitalDiv);
