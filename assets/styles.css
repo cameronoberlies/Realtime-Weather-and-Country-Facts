@@ -2,7 +2,7 @@
     box-sizing: border-box;
     }
     
-    html, body {
+    html, body, main {
         height: 100%;
     }
     .container {
@@ -14,6 +14,10 @@
         max-width: 100%;
        min-height: 100%;
        color: black;
+    }
+
+    #searchInput {
+        margin: 5px;
     }
     
     

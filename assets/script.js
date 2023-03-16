@@ -18,7 +18,7 @@ submitBtn.addEventListener("click", function () {
       var languageDiv = document.createElement('div');
         languageDiv.setAttribute('id', 'language')
         languageDiv.textContent= data[0].languages;//Languages not displaying on page
-      var mapsDiv = document.createElement('div');
+      var mapsDiv = document.createElement('a');
         mapsDiv.setAttribute('id', 'maps');
         mapsDiv.textContent = data[0].maps.googleMaps;
       var regionDiv = document.createElement('div');
@@ -26,7 +26,7 @@ submitBtn.addEventListener("click", function () {
         regionDiv.textContent = data[0].region;
       var populationDiv = document.createElement('div');
         populationDiv.setAttribute('id', 'population');
-        populationDiv.textContent = data[0].population;//Population not displaying on page
+        populationDiv.textContent = data[0].population;
       var container1 = document.querySelector('.container');
         container1.appendChild(currenciesDiv);
         container1.appendChild(capitalDiv);
