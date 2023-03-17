@@ -71,6 +71,7 @@ submitBtn.addEventListener("click", function () {
     });
     function capitalWeather (countryData) {
       var capital = countryData[0].capital[0]
+      //Requires API key that can be generated on https://www.weatherapi.com/
       fetch("https://api.weatherapi.com/v1/current.json?key=35d7f63e5325473788e112056231603&q=" + capital)
       .then(function (response) {
         console.log(response);
@@ -88,8 +89,8 @@ submitBtn.addEventListener("click", function () {
          conditionDiv.setAttribute('id', 'condition')
          var humidityDiv = document.createElement('div');
          humidityDiv.setAttribute('id', 'humidity')
+         //There are no arrays key on objects only eg.data.current.condition.text
          temp_fDiv.textContent = "The temperature in the capital is " + data.current.temp_f + "°F " + "and " + data.current.temp_c + "°C";
-         //temp_cDiv.textContent = "The temperature in the capital is "  + data.current.temp_c + " °C";
          uvDiv.textContent = "The UV index in the capital is "  + data.current.uv;
          conditionDiv.textContent = "The current condition in the capital is "  + data.current.condition.text;
          humidityDiv.textContent = "The current humidty in the capital is " + data.current.humidity +"%";
