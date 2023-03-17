@@ -26,7 +26,7 @@ submitBtn.addEventListener("click", function () {
       var capitalDiv2 = document.createElement('a')
         capitalDiv2.setAttribute('href', wikiLink + data[0].capital[0]);
         capitalDiv2.setAttribute('target', '_blank');
-        capitalDiv2.textContent = 'Wiki Link';
+        capitalDiv2.textContent = ('Wiki Link');
         console.log(capitalDiv2);
       var languageDiv = document.createElement('div');
         languageDiv.setAttribute('id', 'language')
@@ -90,10 +90,10 @@ submitBtn.addEventListener("click", function () {
          var humidityDiv = document.createElement('div');
          humidityDiv.setAttribute('id', 'humidity')
          //There are no arrays key on objects only eg.data.current.condition.text
-         temp_fDiv.textContent = "The temperature in the capital is " + data.current.temp_f + "°F " + "and " + data.current.temp_c + "°C";
-         uvDiv.textContent = "The UV index in the capital is "  + data.current.uv;
-         conditionDiv.textContent = "The current condition in the capital is "  + data.current.condition.text;
-         humidityDiv.textContent = "The current humidty in the capital is " + data.current.humidity +"%";
+         temp_fDiv.textContent = "The temperature in " + capital + " is " + data.current.temp_f + " °F " + "and " + data.current.temp_c + "°C";
+         uvDiv.textContent = "The UV index in " + capital + " is " + data.current.uv;
+         conditionDiv.textContent = "The current condition in " + capital + " is "+ data.current.condition.text;
+         humidityDiv.textContent = "The current humidty in " + capital + " is " + data.current.humidity +"%";
          var container1 = document.querySelector('.container');
          container1.appendChild(temp_fDiv);
          container1.appendChild(temp_cDiv);
