@@ -19,5 +19,12 @@
     #searchInput {
         margin: 5px;
     }
-    
-    
+
+    .background-image {
+  background-image: url("https://cdn.statically.io/img/codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg?f=webp&w=720");
+  height: 100%;
+  min-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
