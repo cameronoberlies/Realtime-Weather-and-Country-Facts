@@ -1,6 +1,6 @@
 var searchBar = document.querySelector("#searchInput");
 var submitBtn = document.querySelector("#submitBtn");
-var container1 = document.querySelector(".container");
+var container1 = document.querySelector(".card-1");
 var wikiLink = "https://en.wikipedia.org/wiki/";
 var populationWikiLink = "https://en.wikipedia.org/wiki/Demographics_of_";
 console.log(wikiLink);
@@ -138,7 +138,7 @@ submitBtn.addEventListener("click", function () {
           " is " +
           data.current.humidity +
           "%";
-        var container1 = document.querySelector(".container");
+        var container1 = document.querySelector(".card-2");
         container1.appendChild(temp_fDiv);
         container1.appendChild(temp_cDiv);
         container1.appendChild(uvDiv);

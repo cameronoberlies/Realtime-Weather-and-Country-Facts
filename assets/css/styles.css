@@ -20,6 +20,25 @@
         margin: 5px;
     }
 
+    .card-1 {
+        width: 200px;
+        height:200px;
+        margin: 10px;
+    }
+
+    .card-2 {
+        
+        width:200px;
+        height:200px;
+    }
+
+    .center {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
     .background-image {
   background-image: url("https://cdn.statically.io/img/codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg?f=webp&w=720");
   height: 100%;
@@ -27,4 +46,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.cards {
+    background: rgb(233 132 66 / 50%);
+    border-radius: 5%;
+    font-weight: bold;
+  
 }
