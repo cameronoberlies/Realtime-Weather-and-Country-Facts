@@ -29,6 +29,10 @@
         display: flex;
         flex-direction: column;
         
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .card-2 {
@@ -39,12 +43,21 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .card-3 {
         width: 200px;
         height:200px;
         margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .center {
