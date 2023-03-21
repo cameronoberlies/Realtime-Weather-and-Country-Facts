@@ -164,15 +164,7 @@ submitBtn.addEventListener("click", function () {
 
 // Function to clear search results
 function clearAll(){
-  document.getElementById("currency").innerHTML = "";
-  document.getElementById("capital").innerHTML = "";
-  document.getElementById("language").innerHTML = "";
-  document.getElementById("region").innerHTML = "";
-  document.getElementById("population").innerHTML = "";
-  document.getElementById("temp_c").innerHTML = "";
-  document.getElementById("condition").innerHTML = "";
-  document.getElementById("humidity").innerHTML = "";
-  document.getElementById("uv").innerHTML = "";
-  document.getElementById("map").innerHTML = "";
+  document.getElementById("card1").innerHTML = "";
+  document.getElementById("card2").innerHTML = "";
+  document.getElementById("card3").innerHTML = "";
 };
-
