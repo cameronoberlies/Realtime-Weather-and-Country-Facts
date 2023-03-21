@@ -32,6 +32,12 @@
         height:200px;
     }
 
+    .card-3 {
+        width: 200px;
+        height:200px;
+        margin: 10px;
+    }
+
     .center {
         width: 50%;
         margin-left: auto;
