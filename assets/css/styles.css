@@ -24,6 +24,11 @@
         width: 200px;
         height:200px;
         margin: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,6 +39,10 @@
         
         width:200px;
         height:200px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         display: flex;
         flex-direction: column;
         justify-content: center;
