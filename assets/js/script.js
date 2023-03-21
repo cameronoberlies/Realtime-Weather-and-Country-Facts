@@ -52,6 +52,7 @@ submitBtn.addEventListener("click", function () {
       languageDiv.innerHTML = `<span>Language: <a target = "_blank" href=${languageLink}>${languageEl}</a></span>`;
 
       var mapsDiv = document.createElement("a");
+      mapsDiv.setAttribute("id", "map");
       mapsDiv.setAttribute("href", data[0].maps.googleMaps);
       mapsDiv.setAttribute("target", "_blank");
       mapsDiv.textContent = "Google Maps";
@@ -147,3 +148,18 @@ submitBtn.addEventListener("click", function () {
       });
   }
 });
+
+// Function to clear search results
+function clearAll(){
+  document.getElementById("currency").innerHTML = "";
+  document.getElementById("capital").innerHTML = "";
+  document.getElementById("language").innerHTML = "";
+  document.getElementById("region").innerHTML = "";
+  document.getElementById("population").innerHTML = "";
+  document.getElementById("temp_c").innerHTML = "";
+  document.getElementById("condition").innerHTML = "";
+  document.getElementById("humidity").innerHTML = "";
+  document.getElementById("uv").innerHTML = "";
+  document.getElementById("map").innerHTML = "";
+};
+
