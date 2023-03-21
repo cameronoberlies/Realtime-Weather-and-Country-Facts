@@ -20,12 +20,12 @@
         <h1>Country Searcher</h1>
         <div class="ui search">
         <div class="ui icon input">
-          <input id="searchInput" class="prompt" type="text" placeholder="Search countries...">
+          <input id="searchInput" class="prompt" type="text" name="server" placeholder="Search countries...">
           <i class="search icon"></i>
         </div>
         <div class="results"></div>
         </div> 
-        <button class="ui primary button " id="submitBtn">
+        <button onclick='saveData()' class="ui primary button " id="submitBtn">
             Search
         </button>
         <button class="ui primary button" id="clearBtn" onclick="clearAll()">
