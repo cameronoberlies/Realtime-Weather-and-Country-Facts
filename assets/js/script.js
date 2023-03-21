@@ -100,7 +100,8 @@ submitBtn.addEventListener("click", function () {
       //container1.appendChild(regionDiv2)
       container1.appendChild(populationDiv);
       //container1.appendChild(populationDiv2);
-      container1.append(searchBar.value);
+      var container2 = document.querySelector(".card-3");
+      container2.append(searchBar.value);
 
       capitalWeather(data);
     });
