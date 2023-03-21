@@ -101,8 +101,11 @@ submitBtn.addEventListener("click", function () {
       //container1.appendChild(regionDiv2)
       container1.appendChild(populationDiv);
       //container1.appendChild(populationDiv2);
-      var container2 = document.querySelector(".card-3");
-      container2.append(searchBar.value);
+      var container3 = document.querySelector(".card-3");
+      var searchLi = document.createElement('div');
+      searchLi.setAttribute("id", "listItem");
+      container3.append(searchBar.value);
+      container3.append(searchLi);
 
       capitalWeather(data);
     });
@@ -152,12 +155,12 @@ submitBtn.addEventListener("click", function () {
           " is " +
           data.current.humidity +
           "%";
-        var container1 = document.querySelector(".card-2");
-        container1.appendChild(temp_fDiv);
-        container1.appendChild(temp_cDiv);
-        container1.appendChild(uvDiv);
-        container1.appendChild(conditionDiv);
-        container1.appendChild(humidityDiv);
+        var container2 = document.querySelector(".card-2");
+        container2.appendChild(temp_fDiv);
+        container2.appendChild(temp_cDiv);
+        container2.appendChild(uvDiv);
+        container2.appendChild(conditionDiv);
+        container2.appendChild(humidityDiv);
       });
   }
 });
@@ -166,5 +169,5 @@ submitBtn.addEventListener("click", function () {
 function clearAll(){
   document.getElementById("card1").innerHTML = "";
   document.getElementById("card2").innerHTML = "";
-  document.getElementById("card3").innerHTML = "";
+  //document.getElementById("card3").innerHTML = "";
 };
