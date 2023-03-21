@@ -4,8 +4,18 @@ var container1 = document.querySelector(".card-1");
 var wikiLink = "https://en.wikipedia.org/wiki/";
 var populationWikiLink = "https://en.wikipedia.org/wiki/Demographics_of_";
 console.log(wikiLink);
+
+function saveData() {
+  var input = document.getElementById("searchInput").value;
+window.localStorage.setItem("server", input);
+console.log(input)
+}
+
+var savedSearch = localStorage.getItem("server");
+
 submitBtn.addEventListener("click", function () {
   console.log("testing");
+  
   fetch("https://restcountries.com/v3.1/name/" + searchBar.value)
     .then(function (response) {
       console.log(response);
@@ -78,6 +88,7 @@ submitBtn.addEventListener("click", function () {
       var populationEl = data[0].population;
       populationDiv.innerHTML = `<span>Population: <a target = "_blank" href=${populationLink}>${populationEl}</a></span>`;
 
+
       container1.appendChild(currenciesDiv);
       // container1.appendChild(currenciesDiv2);
       container1.appendChild(capitalDiv);
@@ -89,6 +100,7 @@ submitBtn.addEventListener("click", function () {
       //container1.appendChild(regionDiv2)
       container1.appendChild(populationDiv);
       //container1.appendChild(populationDiv2);
+      container1.append(searchBar.value);
 
       capitalWeather(data);
     });
