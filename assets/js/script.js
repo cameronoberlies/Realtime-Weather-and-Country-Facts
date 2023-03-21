@@ -32,6 +32,7 @@ submitBtn.addEventListener("click", function () {
         wikiLink + data[0].currencies[Object.keys(data[0].currencies)[0]].name;
       var currencyEl =
         data[0].currencies[Object.keys(data[0].currencies)[0]].name;
+        console.log(currencyEl);
       // currenciesDiv2.setAttribute('href', wikiLink + data[0].currencies[Object.keys(data[0].currencies)[0]].name);
       // currenciesDiv2.setAttribute('target', '_blank');
       // currenciesDiv2.textContent = data[0].currencies[Object.keys(data[0].currencies)[0]].name
@@ -173,6 +174,7 @@ submitBtn.addEventListener("click", function () {
 function clearAll(){
   document.getElementById("card1").innerHTML = "";
   document.getElementById("card2").innerHTML = "";
+  document.getElementById('searchInput').value = "";
   //document.getElementById("card3").innerHTML = "";
 };
 
