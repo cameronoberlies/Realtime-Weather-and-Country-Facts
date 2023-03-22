@@ -2,6 +2,8 @@ var searchBar = document.querySelector("#searchInput");
 var submitBtn = document.querySelector("#submitBtn");
 var container1 = document.querySelector(".card-1");
 var recentSearchVar = document.querySelector(".h2-element");
+var container = document.querySelector(".container");
+var flagContainer = document.querySelector(".flagDiv1");
 //target Wikipedia link
 var wikiLink = "https://en.wikipedia.org/wiki/";
 //Wikipedia link specific to populationDiv
@@ -98,6 +100,12 @@ submitBtn.addEventListener("click", function () {
       var populationEl = data[0].population;
       populationDiv.innerHTML = `<span>Population: <a target = "_blank" href=${populationLink}>${populationEl}</a></span>`;
 
+      var flagDiv = document.createElement('div');
+      flagDiv.setAttribute("id", "flag")
+      var flagLink = data[0].flags.svg;
+      console.log(flagLink);
+      flagDiv.innerHTML = `<img src = "${flagLink}" alt="flag image" id = "flagImg">`;
+
      
       //Appends all of the dynamically created elements above to their respective containers
       container1.appendChild(countryDiv);
@@ -113,6 +121,8 @@ submitBtn.addEventListener("click", function () {
       //container1.appendChild(regionDiv2)
       container1.appendChild(populationDiv);
       //container1.appendChild(populationDiv2);
+      flagContainer.appendChild(flagDiv);
+      
       
       //Dynamically creates a div to display our search bar inputs that have been saved to local storage and appended to its container
       var container3 = document.querySelector(".card-3");
@@ -190,6 +200,7 @@ function clearAll(){
   document.getElementById("card1").innerHTML = "";
   document.getElementById("card2").innerHTML = "";
   document.getElementById('searchInput').value = "";
+  
   //document.getElementById("card3").innerHTML = "";
 };
 
