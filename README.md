@@ -33,7 +33,7 @@ N/A
 N/A
 
 ## Acknowledgments:
-https://github.com/cameronoberlies
-https://github.com/james59222
-https://github.com/TpainMcain
+https://github.com/cameronoberlies  
+https://github.com/james59222  
+https://github.com/TpainMcain  
 
