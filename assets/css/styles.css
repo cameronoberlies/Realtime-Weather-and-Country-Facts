@@ -33,6 +33,7 @@ html, body, main {
     background: rgb(233 132 66 / 50%);
     border-radius: 15px;
     font-weight: bold;
+    line-height: 25px;
 }
 
 .center {
@@ -51,5 +52,5 @@ html, body, main {
 }
 
 #h2RS {
-    color:black;
+    color: white;
 }
