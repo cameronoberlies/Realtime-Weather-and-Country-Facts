@@ -204,6 +204,7 @@ function clearAll(){
   document.getElementById("card1").innerHTML = "";
   document.getElementById("card2").innerHTML = "";
   document.getElementById('searchInput').value = "";
+  flagContainer.innerHTML = "";
   
   //document.getElementById("card3").innerHTML = "";
 };
