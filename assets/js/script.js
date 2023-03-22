@@ -1,6 +1,7 @@
 var searchBar = document.querySelector("#searchInput");
 var submitBtn = document.querySelector("#submitBtn");
 var container1 = document.querySelector(".card-1");
+var recentSearchVar = document.querySelector(".h2-element");
 var wikiLink = "https://en.wikipedia.org/wiki/";
 var populationWikiLink = "https://en.wikipedia.org/wiki/Demographics_of_";
 console.log(wikiLink);
@@ -84,6 +85,10 @@ submitBtn.addEventListener("click", function () {
       var populationEl = data[0].population;
       populationDiv.innerHTML = `<span>Population: <a target = "_blank" href=${populationLink}>${populationEl}</a></span>`;
 
+      var recentSearchText = document.createElement("h2");
+      recentSearchText.setAttribute("id", "h2RS");
+      recentSearchText.textContent= ("Recent Searches");
+
 
       container1.appendChild(currenciesDiv);
       container1.appendChild(currenciesDiv2);
@@ -101,6 +106,8 @@ submitBtn.addEventListener("click", function () {
       searchLi.setAttribute("id", "listItem");
       container3.append(searchBar.value);
       container3.append(searchLi);
+      recentSearchVar.append(recentSearchText);
+
 
       capitalWeather(data);
     });
