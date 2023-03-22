@@ -56,7 +56,7 @@ html, body, main {
 }
 
 #h2RS {
-    color: black;
+    color: white;
 }
 
 #clearBtn, #submitBtn {
@@ -64,8 +64,10 @@ html, body, main {
     margin-right: 20px;
 }
 
-#flagDiv1 {
+#flagImgID {
     width: 150px;
     height: 100px;
     margin: 10px;
+    align-items: center;
+    justify-content: center;
 }

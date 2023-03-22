@@ -104,12 +104,13 @@ submitBtn.addEventListener("click", function () {
       flagDiv.setAttribute("id", "flag")
       var flagLink = data[0].flags.svg;
       console.log(flagLink);
-      flagDiv.innerHTML = `<img src = "${flagLink}" alt="flag image" id = "flagDiv1">`;
+      flagDiv.innerHTML = `<img src = "${flagLink}" alt="flag image" id = "flagImgID">`;
 
      
       //Appends all of the dynamically created elements above to their respective containers
       
       container.appendChild(flagDiv);
+      flagContainer.append(flagDiv);
       container1.appendChild(countryDiv);
       container1.appendChild(countryDiv2);
       container1.appendChild(currenciesDiv);
