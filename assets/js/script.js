@@ -24,31 +24,25 @@ submitBtn.addEventListener("click", function () {
     .then(function (data) {
       console.log(data);
       var currenciesDiv = document.createElement("div");
+      var currenciesDiv2 = document.createElement('a');
       // var currencyLabel = document.createElement('span');
       currenciesDiv.setAttribute("id", "currency");
-      // currenciesDiv.textContent = data[0].currencies[Object.keys(data[0].currencies)[0]].name;
-      // var currenciesDiv2 = document.createElement('a');
-      var currencyLink =
-        wikiLink + data[0].currencies[Object.keys(data[0].currencies)[0]].name;
-      var currencyEl =
-        data[0].currencies[Object.keys(data[0].currencies)[0]].name;
-        console.log(currencyEl);
-      // currenciesDiv2.setAttribute('href', wikiLink + data[0].currencies[Object.keys(data[0].currencies)[0]].name);
-      // currenciesDiv2.setAttribute('target', '_blank');
-      // currenciesDiv2.textContent = data[0].currencies[Object.keys(data[0].currencies)[0]].name
-      currenciesDiv.innerHTML = `<span>Currency: <a target="_blank" href=${currencyLink}>${currencyEl}</a></span>`;
+      //var currencyEl = (data[0].currencies[Object.keys(data[0].currencies)[0]].name);
+      //var currencyLink = wikiLink + currencyEl;
+      currenciesDiv2.setAttribute('href', wikiLink + data[0].currencies[Object.keys(data[0].currencies)[0]].name);
+      currenciesDiv2.setAttribute('target', '_blank');
+      currenciesDiv2.textContent ="Currency:" + data[0].currencies[Object.keys(data[0].currencies)[0]].name
+      //currenciesDiv.innerHTML = `<span>Currency: <a target="_blank" href=${currencyLink}>${currencyEl}</a></span>`;
 
       var capitalDiv = document.createElement("div");
+      var capitalDiv2 = document.createElement('a')
       capitalDiv.setAttribute("id", "capital");
-
-      //capitalDiv.textContent = "Capital:" + data[0].capital[0]
-      //var capitalDiv2 = document.createElement('a')
-      //capitalDiv2.setAttribute('href', wikiLink + data[0].capital[0]);
-      //capitalDiv2.setAttribute('target', '_blank');
-      //capitalDiv2.textContent = 'Wiki Link';
-      var capitalLink = wikiLink + data[0].capital[0];
-      var capitalEl = data[0].capital[0];
-      capitalDiv.innerHTML = `<span>Capital: <a target = "_blank" href=${capitalLink}>${capitalEl}</a></span>`;
+      capitalDiv2.setAttribute('href', wikiLink + data[0].capital[0]);
+      capitalDiv2.setAttribute('target', '_blank');
+      capitalDiv2.textContent = "Capital:" + data[0].capital[0];
+      //var capitalLink = wikiLink + data[0].capital[0];
+      //var capitalEl = data[0].capital[0];
+      //capitalDiv.innerHTML = `<span>Capital: <a target = "_blank" href=${capitalLink}>${capitalEl}</a></span>`;
 
       var languageDiv = document.createElement("div");
       languageDiv.setAttribute("id", "language");
@@ -92,9 +86,9 @@ submitBtn.addEventListener("click", function () {
 
 
       container1.appendChild(currenciesDiv);
-      // container1.appendChild(currenciesDiv2);
+      container1.appendChild(currenciesDiv2);
       container1.appendChild(capitalDiv);
-      //container1.appendChild(capitalDiv2);
+      container1.appendChild(capitalDiv2);
       container1.appendChild(languageDiv);
       //container1.appendChild(languageDiv2);
       container1.appendChild(mapsDiv);
