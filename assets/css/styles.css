@@ -36,6 +36,10 @@ html, body, main {
     line-height: 25px;
 }
 
+.card-3 {
+    font-size: large;
+}
+
 .center {
     width: 50%;
     margin-left: auto;
