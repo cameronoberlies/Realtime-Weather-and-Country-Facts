@@ -1,90 +1,55 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    }
+}
     
-    html, body, main {
-        height: 100%;
-    }
-    .container {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        background-color:white;
-        max-width: 100%;
-       min-height: 100%;
-       color: black;
-    }
-
-    #searchInput {
-        margin: 5px;
-    }
-
-    .card-1 {
-        width: 200px;
-        height:200px;
-        margin: 10px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card-2 {
-        
-        width:200px;
-        height:200px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card-3 {
-        width: 200px;
-        height:200px;
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-
-    }
-
-    .center {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-
-    .background-image {
-  background-image: url("https://cdn.statically.io/img/codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg?f=webp&w=720");
-  height: 100%;
-  min-width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+html, body, main {
+    height: 100%;
 }
 
-.cards {
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    max-width: 100%;
+    min-height: 100%;
+    color: black;
+}
+
+#searchInput {
+    margin: 5px;
+}
+
+.cards, .card-1, .card-2, .card-3 {
+    width: 200px;
+    height:200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: rgb(233 132 66 / 50%);
-    border-radius: 5%;
+    border-radius: 15px;
     font-weight: bold;
-  
+}
+
+.center {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background-image {
+    background-image: url("https://cdn.statically.io/img/codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg?f=webp&w=720");
+    height: 100%;
+    min-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #h2RS {
-    color:white;
+    color:black;
 }
