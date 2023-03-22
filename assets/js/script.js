@@ -104,10 +104,11 @@ submitBtn.addEventListener("click", function () {
       flagDiv.setAttribute("id", "flag")
       var flagLink = data[0].flags.svg;
       console.log(flagLink);
-      flagDiv.innerHTML = `<img src = "${flagLink}" alt="flag image" id = "flagImg">`;
+      flagDiv.innerHTML = `<img src = "${flagLink}" alt="flag image" id = "flagDiv1">`;
 
      
       //Appends all of the dynamically created elements above to their respective containers
+      container.appendChild(flagDiv);
       container1.appendChild(countryDiv);
       container1.appendChild(countryDiv2);
       container1.appendChild(currenciesDiv);
@@ -121,7 +122,8 @@ submitBtn.addEventListener("click", function () {
       //container1.appendChild(regionDiv2)
       container1.appendChild(populationDiv);
       //container1.appendChild(populationDiv2);
-      flagContainer.appendChild(flagDiv);
+      container.append(flagLink);
+      
       
       
       //Dynamically creates a div to display our search bar inputs that have been saved to local storage and appended to its container

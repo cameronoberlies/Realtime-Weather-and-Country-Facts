@@ -63,3 +63,9 @@ html, body, main {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+#flagDiv1 {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+}
