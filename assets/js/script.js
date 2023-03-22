@@ -24,6 +24,14 @@ submitBtn.addEventListener("click", function () {
     })
     .then(function (data) {
       console.log(data);
+
+      var countryDiv = document.createElement("div");
+      countryDiv.setAttribute("id", "country");
+      var countryDiv2 = document.createElement("a");
+      countryDiv2.setAttribute('href', wikiLink + searchBar.value);
+      countryDiv2.setAttribute('target', '_blank');
+      countryDiv2.textContent = searchBar.value;
+
       var currenciesDiv = document.createElement("div");
       var currenciesDiv2 = document.createElement('a');
       // var currencyLabel = document.createElement('span');
@@ -87,7 +95,8 @@ submitBtn.addEventListener("click", function () {
 
      
 
-
+      container1.appendChild(countryDiv);
+      container1.appendChild(countryDiv2);
       container1.appendChild(currenciesDiv);
       container1.appendChild(currenciesDiv2);
       container1.appendChild(capitalDiv);
