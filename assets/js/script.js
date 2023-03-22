@@ -85,9 +85,7 @@ submitBtn.addEventListener("click", function () {
       var populationEl = data[0].population;
       populationDiv.innerHTML = `<span>Population: <a target = "_blank" href=${populationLink}>${populationEl}</a></span>`;
 
-      var recentSearchText = document.createElement("h2");
-      recentSearchText.setAttribute("id", "h2RS");
-      recentSearchText.textContent= ("Recent Searches");
+     
 
 
       container1.appendChild(currenciesDiv);
@@ -106,7 +104,7 @@ submitBtn.addEventListener("click", function () {
       searchLi.setAttribute("id", "listItem");
       container3.append(searchBar.value);
       container3.append(searchLi);
-      recentSearchVar.append(recentSearchText);
+      
 
 
       capitalWeather(data);
