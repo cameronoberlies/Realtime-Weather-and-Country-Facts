@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Link html to css and normalize. -->
+<!-- Link html to css, normalize, semanticUI, fontawesome. -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" 
     integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Project-01</title>
   </head>
   
   <main>
     <body>
-<!-- Container for search bar -->
+<!-- Container for bgimg, search bar, buttons, results -->
       <div class="container ui inverted vertical masthead center aligned background-image">
-        <h1>Search By Country</h1>
+        <h1><i class="fa fa-globe" aria-hidden="true"></i>      Search By Country     <i class="fa fa-globe" aria-hidden="true"></i></h1>
         <div class="ui search">
         <div class="ui icon input">
           <input id="searchInput" class="prompt" type="text" name="server" placeholder="Search countries...">
@@ -33,6 +34,7 @@
         </button>
         <div class = "card-1 center cards" id = "card1"></div>
         <div class = "card-2 center cards" id = "card2"></div>
+        <div><h2>Recent Searches:</h2></div>
         <div class = "card-3 center cards" id = "card3"></div>
 
   
