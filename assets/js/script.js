@@ -2,10 +2,13 @@ var searchBar = document.querySelector("#searchInput");
 var submitBtn = document.querySelector("#submitBtn");
 var container1 = document.querySelector(".card-1");
 var recentSearchVar = document.querySelector(".h2-element");
+//target Wikipedia link
 var wikiLink = "https://en.wikipedia.org/wiki/";
+//Wikipedia link specific to populationDiv
 var populationWikiLink = "https://en.wikipedia.org/wiki/Demographics_of_";
 console.log(wikiLink);
 
+//Function saves the search bar input data into local storage.
 function saveData() {
   var input = document.getElementById("searchInput").value;
 window.localStorage.setItem("server", input);
@@ -14,9 +17,11 @@ console.log(input)
 
 var savedSearch = localStorage.getItem("server");
 
+//Adds an event listener to the search button 
 submitBtn.addEventListener("click", function () {
   console.log("testing");
   
+  //After the search button is clicked it calls the REST countries API
   fetch("https://restcountries.com/v3.1/name/" + searchBar.value)
     .then(function (response) {
       console.log(response);
@@ -94,7 +99,7 @@ submitBtn.addEventListener("click", function () {
       populationDiv.innerHTML = `<span>Population: <a target = "_blank" href=${populationLink}>${populationEl}</a></span>`;
 
      
-
+      //Appends all of the dynamically created elements above to their respective containers
       container1.appendChild(countryDiv);
       container1.appendChild(countryDiv2);
       container1.appendChild(currenciesDiv);
@@ -108,6 +113,8 @@ submitBtn.addEventListener("click", function () {
       //container1.appendChild(regionDiv2)
       container1.appendChild(populationDiv);
       //container1.appendChild(populationDiv2);
+      
+      //Dynamically creates a div to display our search bar inputs that have been saved to local storage and appended to its container
       var container3 = document.querySelector(".card-3");
       var searchLi = document.createElement('div');
       searchLi.setAttribute("id", "listItem");
