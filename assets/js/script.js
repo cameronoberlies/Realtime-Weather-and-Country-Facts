@@ -218,6 +218,7 @@ function runSearchAgain(e) {
 
 function addToPreviousSearchsDiv(country) {
   var countrySpan = document.createElement('span');
+  countrySpan.setAttribute("id", "countrySpan");
   countrySpan.textContent = country;
   countrySpan.addEventListener('click', runSearchAgain);
   container3.append(countrySpan);

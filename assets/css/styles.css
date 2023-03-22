@@ -38,6 +38,7 @@ html, body, main {
 
 .card-3 {
     font-size: large;
+     
 }
 
 .center {
@@ -70,4 +71,9 @@ html, body, main {
     margin: 10px;
     align-items: center;
     justify-content: center;
+}
+
+#countrySpan:hover {
+    color: white;
+    cursor: pointer;
 }
