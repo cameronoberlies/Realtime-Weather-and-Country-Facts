@@ -58,3 +58,8 @@ html, body, main {
 #h2RS {
     color: black;
 }
+
+#clearBtn, #submitBtn {
+    margin-left: 20px;
+    margin-right: 20px;
+}
