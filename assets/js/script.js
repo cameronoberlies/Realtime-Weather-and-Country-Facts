@@ -108,6 +108,7 @@ submitBtn.addEventListener("click", function () {
 
      
       //Appends all of the dynamically created elements above to their respective containers
+      
       container.appendChild(flagDiv);
       container1.appendChild(countryDiv);
       container1.appendChild(countryDiv2);
@@ -122,7 +123,7 @@ submitBtn.addEventListener("click", function () {
       //container1.appendChild(regionDiv2)
       container1.appendChild(populationDiv);
       //container1.appendChild(populationDiv2);
-      container.append(flagLink);
+     
       
       
       
