@@ -4,6 +4,8 @@ Project-01: "Realtime Weather and Country facts"
 Project is using two API's to gather information regarding country facts and current weather conditions.  
 The application pulls current data from restcountries.com API and weatherapi.com.  
 Data from Restcountries.com has a hyperlink to wikipedia identifying key facts.   
+Rest countries provides flag images for every country with a .svg or .png file to link to html. 
+Project displays dynamically the flag for every country as an image.
 The restcountries.com api also includes googlemaps links to the country which is also included in the app.  
 The weatherapi.com API pulls current weather information for the capital city of the country searched on. 
 There is a separate search for city only weather.
