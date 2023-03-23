@@ -58,7 +58,7 @@ function getCapitalWeather(countryData) {
         capital +
         " is " +
         data.current.temp_f +
-        " °F " +
+        "°F " +
         "and " +
         data.current.temp_c +
         "°C";
@@ -83,7 +83,64 @@ function getCapitalWeather(countryData) {
       container2.appendChild(humidityDiv);
     });
 }
-
+//Weather for city only
+function getCapitalWeather2() {
+  clearAll();
+  var city = searchBar.value;
+  
+  //Requires API key that can be generated on https://www.weatherapi.com/
+  fetch(
+    "https://api.weatherapi.com/v1/current.json?key=35d7f63e5325473788e112056231603&q=" +
+    city
+  )
+    .then(function (response) {
+      console.log(response);
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data, "Capital Weather");
+      var uvDiv = document.createElement("div");
+      uvDiv.setAttribute("id", "uv");
+      var temp_fDiv = document.createElement("div");
+      temp_fDiv.setAttribute("id", "temp_f");
+      var temp_cDiv = document.createElement("div");
+      temp_fDiv.setAttribute("id", "temp_c");
+      var conditionDiv = document.createElement("div");
+      conditionDiv.setAttribute("id", "condition");
+      var humidityDiv = document.createElement("div");
+      humidityDiv.setAttribute("id", "humidity");
+      //There are no arrays key on objects only eg.data.current.condition.text
+      temp_fDiv.textContent =
+        "The temperature in " +
+        city +
+        " is " +
+        data.current.temp_f +
+        "°F " +
+        "and " +
+        data.current.temp_c +
+        "°C";
+      uvDiv.textContent =
+        "The UV index in " + city + " is " + data.current.uv;
+      conditionDiv.textContent =
+        "The current condition in " +
+        city +
+        " is " +
+        data.current.condition.text;
+      humidityDiv.textContent =
+        "The current humidity in " +
+        city +
+        " is " +
+        data.current.humidity +
+        "%";
+      var container2 = document.querySelector(".card-2");
+      container2.appendChild(temp_fDiv);
+      container2.appendChild(temp_cDiv);
+      container2.appendChild(uvDiv);
+      container2.appendChild(conditionDiv);
+      container2.appendChild(humidityDiv);
+      
+    });
+}
 function runSearch() {
   // clear out existing content
   clearAll();
