@@ -177,7 +177,7 @@ function doAlotOfStuff(data) {
   //var currencyLink = wikiLink + currencyEl;
   currenciesDiv2.setAttribute('href', wikiLink + data[0].currencies[Object.keys(data[0].currencies)[0]].name);
   currenciesDiv2.setAttribute('target', '_blank');
-  currenciesDiv2.textContent = "Currency:" + data[0].currencies[Object.keys(data[0].currencies)[0]].name
+  currenciesDiv2.textContent = "Currency: " + data[0].currencies[Object.keys(data[0].currencies)[0]].name
   //currenciesDiv.innerHTML = `<span>Currency: <a target="_blank" href=${currencyLink}>${currencyEl}</a></span>`;
 
   var capitalDiv = document.createElement("div");
@@ -185,7 +185,7 @@ function doAlotOfStuff(data) {
   capitalDiv.setAttribute("id", "capital");
   capitalDiv2.setAttribute('href', wikiLink + data[0].capital[0]);
   capitalDiv2.setAttribute('target', '_blank');
-  capitalDiv2.textContent = "Capital:" + data[0].capital[0];
+  capitalDiv2.textContent = "Capital: " + data[0].capital[0];
   //var capitalLink = wikiLink + data[0].capital[0];
   //var capitalEl = data[0].capital[0];
   //capitalDiv.innerHTML = `<span>Capital: <a target = "_blank" href=${capitalLink}>${capitalEl}</a></span>`;
