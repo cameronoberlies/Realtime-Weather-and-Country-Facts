@@ -5,7 +5,8 @@ Project is using two API's to gather information regarding country facts and cur
 The application pulls current data from restcountries.com API and weatherapi.com.  
 Data from Restcountries.com has a hyperlink to wikipedia identifying key facts.   
 The restcountries.com api also includes googlemaps links to the country which is also included in the app.  
-The weatherapi.com API pulls current weather information for the capital city of the country searched on.  
+The weatherapi.com API pulls current weather information for the capital city of the country searched on. 
+There is a separate search for city only weather.
 There is also a history of searched countries that allows the user to search a previously searched country again using local storage.  
 The technologies of code used was javascript, CSS, and html.  
 Challenges faced were learning to use API data and determine if objects were separate or in an array.  
