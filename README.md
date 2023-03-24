@@ -1,4 +1,4 @@
-Project-01: "Realtime Weather and Country facts"
+# Project-01: "Realtime Weather and Country facts"
 
 ## Description:
 Project is using two API's to gather information regarding country facts and current weather conditions.  
@@ -39,4 +39,5 @@ N/A
 https://github.com/cameronoberlies  
 https://github.com/james59222  
 https://github.com/TpainMcain  
+https://github.com/FisoRenne  
 
