@@ -12,10 +12,10 @@ html, body, main {
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color:white;
     max-width: 100%;
     min-height: 100%;
-    color: black;
+    color: white;
+    letter-spacing: 1px;
 }
 
 #searchInput {
@@ -37,8 +37,7 @@ html, body, main {
 }
 
 .card-3 {
-    font-size: large;
-     
+    font-size: large; 
 }
 
 .center {
@@ -56,14 +55,11 @@ html, body, main {
     background-size: cover;
 }
 
-#h2RS {
-    color: white;
-}
-
-#clearBtn, #submitBtn {
+/* Code for spacing between btns no longer needed */
+/* #clearBtn, #submitBtn, #cityBtn {
     margin-left: 20px;
     margin-right: 20px;
-}
+} */
 
 #flagImgID {
     width: 150px;
