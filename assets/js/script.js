@@ -27,6 +27,7 @@ function clearAll() {
   container2.innerHTML = "";
   searchBar.innerHTML = "";
   flagContainer.innerHTML = "";
+  //searchBar.value = "";
 };
 
 function getCapitalWeather(countryData) {
@@ -53,6 +54,8 @@ function getCapitalWeather(countryData) {
       var humidityDiv = document.createElement("div");
       humidityDiv.setAttribute("id", "humidity");
       //There are no arrays key on objects only eg.data.current.condition.text
+      //Sets text to be displayed in card-2 dynamically
+
       temp_fDiv.textContent =
         "The temperature in " +
         capital +
@@ -83,11 +86,11 @@ function getCapitalWeather(countryData) {
       container2.appendChild(humidityDiv);
     });
 }
-//Weather for city only
+//Weather info for city only
 function getCapitalWeather2() {
-  clearAll();
-  var city = searchBar.value;
   
+  var city = searchBar.value;
+  clearAll();
   //Requires API key that can be generated on https://www.weatherapi.com/
   fetch(
     "https://api.weatherapi.com/v1/current.json?key=35d7f63e5325473788e112056231603&q=" +
@@ -95,7 +98,11 @@ function getCapitalWeather2() {
   )
     .then(function (response) {
       console.log(response);
+      // set search bar value to an empty string!
+      searchBar.value = "";
       return response.json();
+      
+     
     })
     .then(function (data) {
       console.log(data, "Capital Weather");
@@ -110,6 +117,7 @@ function getCapitalWeather2() {
       var humidityDiv = document.createElement("div");
       humidityDiv.setAttribute("id", "humidity");
       //There are no arrays key on objects only eg.data.current.condition.text
+      //Sets text to be displayed in card-2 dynamically
       temp_fDiv.textContent =
         "The temperature in " +
         city +
@@ -138,7 +146,7 @@ function getCapitalWeather2() {
       container2.appendChild(uvDiv);
       container2.appendChild(conditionDiv);
       container2.appendChild(humidityDiv);
-      
+      searchBar.value = "";
     });
 }
 function runSearch() {
@@ -171,14 +179,10 @@ function doAlotOfStuff(data) {
 
   var currenciesDiv = document.createElement("div");
   var currenciesDiv2 = document.createElement('a');
-  // var currencyLabel = document.createElement('span');
   currenciesDiv.setAttribute("id", "currency");
-  //var currencyEl = (data[0].currencies[Object.keys(data[0].currencies)[0]].name);
-  //var currencyLink = wikiLink + currencyEl;
   currenciesDiv2.setAttribute('href', wikiLink + data[0].currencies[Object.keys(data[0].currencies)[0]].name);
   currenciesDiv2.setAttribute('target', '_blank');
   currenciesDiv2.textContent = "Currency: " + data[0].currencies[Object.keys(data[0].currencies)[0]].name
-  //currenciesDiv.innerHTML = `<span>Currency: <a target="_blank" href=${currencyLink}>${currencyEl}</a></span>`;
 
   var capitalDiv = document.createElement("div");
   var capitalDiv2 = document.createElement('a')
@@ -186,17 +190,9 @@ function doAlotOfStuff(data) {
   capitalDiv2.setAttribute('href', wikiLink + data[0].capital[0]);
   capitalDiv2.setAttribute('target', '_blank');
   capitalDiv2.textContent = "Capital: " + data[0].capital[0];
-  //var capitalLink = wikiLink + data[0].capital[0];
-  //var capitalEl = data[0].capital[0];
-  //capitalDiv.innerHTML = `<span>Capital: <a target = "_blank" href=${capitalLink}>${capitalEl}</a></span>`;
 
   var languageDiv = document.createElement("div");
   languageDiv.setAttribute("id", "language");
-  //languageDiv.textContent= "Language: " + data[0].languages[Object.keys(data[0].languages)[0]];
-  //var languageDiv2 = document.createElement('a');
-  // languageDiv2.setAttribute('href', wikiLink +  data[0].languages[Object.keys(data[0].languages)[0]]);
-  //languageDiv2.setAttribute('target', '_blank');
-  //languageDiv2.textContent = ('Wiki Link');
   var languageLink =
     wikiLink + data[0].languages[Object.keys(data[0].languages)[0]];
   var languageEl = data[0].languages[Object.keys(data[0].languages)[0]];
@@ -210,30 +206,16 @@ function doAlotOfStuff(data) {
 
   var regionDiv = document.createElement("div");
   regionDiv.setAttribute("id", "region");
-  //regionDiv.textContent = "Region: " + data[0].region;
-  //var regionDiv2 = document.createElement('a');
-  //regionDiv2.setAttribute('href', wikiLink + data[0].region );
-  //regionDiv2.setAttribute('target', '_blank');
-  //regionDiv2.textContent = 'Wiki Link';
   var regionLink = wikiLink + data[0].region;
   var regionEl = data[0].region;
   regionDiv.innerHTML = `<span>Region: <a target = "_blank" href=${regionLink}>${regionEl}</a></span>`;
 
   var populationDiv = document.createElement("div");
   populationDiv.setAttribute("id", "population");
-  // populationDiv.textContent = "Population: " + data[0].population;
-  //var populationDiv2 = document.createElement('a');
-  //populationDiv2.setAttribute('href', populationWikiLink + searchBar.value);
-  //populationDiv2.setAttribute('target', '_blank');
-  // populationDiv2.textContent = ('Wiki Link');
   var populationLink = populationWikiLink + searchBar.value;
   var populationEl = data[0].population;
   populationDiv.innerHTML = `<span>Population: <a target = "_blank" href=${populationLink}>${populationEl}</a></span>`;
-
-  // var flagDiv = document.createElement('div');
-  // flagDiv.setAttribute("id", "flag")
   var flagLink = data[0].flags.svg;
-  // console.log(flagLink);
   flagContainer.innerHTML = `<img src = "${flagLink}" alt="flag image" id = "flagImgID">`;
 
 
@@ -255,7 +237,6 @@ function doAlotOfStuff(data) {
   //container1.appendChild(populationDiv2);     
   //Dynamically creates a div to display our search bar inputs that have been saved to local storage and appended to its container
   var prevSearchSpan = document.createElement('span');
-  //prevSearchSpan.setAttribute("id", "listItem");
 }
 
 function runSearchAgain(e) {

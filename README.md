@@ -9,7 +9,7 @@ Project displays dynamically the flag for every country as an image.
 The restcountries.com api also includes googlemaps links to the country which is also included in the app.  
 The weatherapi.com API pulls current weather information for the capital city of the country searched on. 
 There is a separate search for city only weather.
-There is also a history of searched countries that allows the user to search a previously searched country again using local storage.  
+There is also a history of searched countries that allows the user to search a previously searched country with a click using local storage.  
 The technologies of code used was javascript, CSS, and html.  
 Challenges faced were learning to use API data and determine if objects were separate or in an array.  
 API data format is not standardized and many API's use different formats to send data.
