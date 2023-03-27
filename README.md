@@ -19,10 +19,10 @@ Github repository link: https://github.com/cameronoberlies/group7project.git.
 Github live page: https://cameronoberlies.github.io/group7project/
 
 ## Screenshots:
-![Alt text](/assets/images/sbc1.jpg?raw=true "1")
-![Alt text](/assets/images/sbc2.jpg?raw=true "2")
-![Alt text](/assets/images/sbc3.jpg?raw=true "3")
-![Alt text](/assets/images/sbc4.jpg?raw=true "4")
+![Alt text](/assets/imgs/sbc1.jpg?raw=true "1")
+![Alt text](/assets/imgs/sbc2.jpg?raw=true "2")
+![Alt text](/assets/imgs/sbc3.jpg?raw=true "3")
+![Alt text](/assets/imgs/sbc4.jpg?raw=true "4")
 
 ## Getting Started:
 Running the program only requires a web browser.
