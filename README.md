@@ -16,7 +16,7 @@ API data format is not standardized and many API's use different formats to send
 
 ## Links:
 Github repository link: https://github.com/cameronoberlies/group7project.git.  
-Github live page: 
+Github live page: https://cameronoberlies.github.io/group7project/
 
 ## Screenshots:
 
