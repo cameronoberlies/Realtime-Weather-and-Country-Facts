@@ -15,7 +15,7 @@ Challenges faced were learning to use API data and determine if objects were sep
 API data format is not standardized and many API's use different formats to send data.
 
 ## Links:
-Github repository link: 
+Github repository link: https://github.com/cameronoberlies/Realtime-Weather-and-Country-Facts
 Github live page: https://cameronoberlies.github.io/Realtime-Weather-and-Country-Facts/
 
 ## Screenshots:
