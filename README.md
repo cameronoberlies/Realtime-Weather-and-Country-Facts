@@ -16,6 +16,7 @@ API data format is not standardized and many API's use different formats to send
 
 ## Links:
 Github repository link: https://github.com/cameronoberlies/Realtime-Weather-and-Country-Facts
+
 Github live page: https://cameronoberlies.github.io/Realtime-Weather-and-Country-Facts/
 
 ## Screenshots:
